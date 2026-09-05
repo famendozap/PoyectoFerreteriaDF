@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+<rect width="320" height="320" fill="#3F7D4C"/>
+<rect width="320" height="320" fill="#22262B" opacity="0.12"/>
+<g transform="translate(96,70) scale(2.1)">
+  <path d="M32 54 V26 M32 26 c-14 0 -18 -14 -18 -14 s16 -2 18 14 M32 26 c14 0 18 -14 18 -14 s-16 -2 -18 14" fill="#ffffff" opacity="0.92"/>
+</g>
+<text x="160" y="256" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="24" font-weight="700" fill="#ffffff">Jardín y</text><text x="160" y="284" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="24" font-weight="700" fill="#ffffff">Exterior</text>
+</svg>

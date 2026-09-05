@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+<rect width="320" height="320" fill="#8b6a52"/>
+<rect width="320" height="320" fill="#22262B" opacity="0.12"/>
+<g transform="translate(96,70) scale(2.1)">
+  <path d="M10 24 h44 v6 h-44 z M10 34 h44 v6 h-44 z M10 44 h30 v6 h-30 z" fill="#ffffff" opacity="0.92"/>
+</g>
+<text x="160" y="256" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="24" font-weight="700" fill="#ffffff">Madera y</text><text x="160" y="284" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="24" font-weight="700" fill="#ffffff">Tableros</text>
+</svg>
