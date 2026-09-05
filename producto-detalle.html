@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle de producto — Ferretería Los Maestros</title>
+<meta name="description" content="Ficha técnica y precio del producto seleccionado del catálogo.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="barra-info">
+  <div class="contenedor">
+    <span>📍 Av. Francisco de Aguirre 450, La Serena · 📞 (51) 222 3344</span>
+    <span>Lun a sáb · 09:00–19:30 hrs</span>
+  </div>
+</div>
+
+<header class="cabecera">
+  <div class="contenedor">
+    <a href="index.html" class="logo-link"><img src="img/logo.svg" alt="Ferretería Los Maestros"></a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html" class="">Inicio</a>
+      <a href="catalogo.html" class=" activo">Catálogo</a>
+      <a href="nosotros.html" class="">Nosotros</a>
+      <a href="novedades.html" class="">Novedades</a>
+      <a href="contacto.html" class="">Contacto</a>
+      <a href="registro.html" class="">Crear cuenta</a>
+      <a href="login.html" class="">Iniciar sesión</a>
+    </nav>
+    <div class="acciones-usuario" data-zona-sesion>
+      <a href="seleccion.html" class="boton boton-secundario boton-pequeno">
+        Mi lista <span data-contador-seleccion style="background:var(--amber); color:var(--graphite); border-radius:999px; padding:0 7px; margin-left:4px; display:none;">0</span>
+      </a>
+      <button type="button" class="boton-menu" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="seccion">
+  <div class="contenedor">
+    <div class="migas">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / <a href="catalogo.html" id="miga-categoria">Categoría</a> / <span id="miga-nombre">Producto</span>
+    </div>
+    <div class="detalle-producto" id="detalle-producto">
+      <p>Cargando producto…</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div>
+      <img src="img/logo-blanco.svg" alt="Ferretería Los Maestros" style="height:40px; margin-bottom:12px;">
+      <p>Negocio familiar con 22 años de trayectoria en La Serena, Región de Coquimbo, atendiendo a particulares y contratistas.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mi cuenta</h4>
+      <ul>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="registro.html">Crear cuenta</a></li>
+        <li><a href="seleccion.html">Mi lista de pedido</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li>Av. Francisco de Aguirre 450, La Serena</li>
+        <li>(51) 222 3344</li>
+        <li>contacto@losmaestros.cl</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pie-legal">© 2026 Ferretería Los Maestros · Proyecto académico DSY1104 Desarrollo FullStack II — Duoc UC</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validaciones.js"></script>
+<script src="js/main.js"></script>
+<script src="js/producto-detalle.js"></script>
+</body>
+</html>
