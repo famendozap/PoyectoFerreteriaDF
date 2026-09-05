@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mantenedor de productos — Panel admin</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<aside class="admin-sidebar">
+  <div class="admin-logo">
+    <img src="../img/favicon.svg" alt="">
+    <span>Los Maestros</span>
+  </div>
+  <span class="admin-badge-rol">ROL: ADMINISTRADOR</span>
+  <nav class="admin-nav" aria-label="Navegación administrativa">
+    <a href="index.html" class="">Panel principal</a>
+    <a href="productos.html" class=" activo">Mantenedor de productos</a>
+    <a href="usuarios.html" class="">Mantenedor de usuarios</a>
+  </nav>
+  <div class="admin-sidebar-pie">
+    <div class="admin-volver">
+      <a href="../index.html">&larr; Volver al sitio público</a>
+    </div>
+  </div>
+</aside>
+<main class="admin-contenido">
+
+<div class="admin-topbar">
+  <div>
+    <h1>Mantenedor de productos</h1>
+    <p>Total: <span id="total-productos-admin">–</span> productos · Bajo stock mínimo: <span id="total-bajo-stock-admin">–</span></p>
+  </div>
+  <div style="display:flex; gap:10px;">
+    <button type="button" class="boton boton-linea" id="btn-restaurar-catalogo">Restaurar catálogo original</button>
+    <button type="button" class="boton boton-primario" id="btn-nuevo-producto">+ Nuevo producto</button>
+  </div>
+</div>
+
+<div class="admin-panel">
+  <div class="admin-tabla-wrap">
+    <table class="admin-tabla">
+      <thead>
+        <tr><th>Código</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+      </thead>
+      <tbody id="cuerpo-tabla-productos"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="admin-panel" id="panel-edicion-producto" style="display:none;">
+  <h2 id="titulo-panel-edicion">Editar producto</h2>
+  <form id="form-editar-producto" novalidate>
+    <input type="hidden" id="edit-id">
+    <div class="campo">
+      <label>Código</label>
+      <input type="text" id="edit-id-visible" disabled>
+    </div>
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-nombre">Nombre del producto</label>
+        <input type="text" id="edit-nombre" maxlength="120" required>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-categoria">Categoría</label>
+        <select id="edit-categoria" required></select>
+      </div>
+    </div>
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-marca">Marca</label>
+        <input type="text" id="edit-marca" required>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-unidad">Unidad de venta</label>
+        <input type="text" id="edit-unidad" placeholder="Unidad, Saco, Caja…" required>
+        <span class="mensaje-error"></span>
+      </div>
+    </div>
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-precio">Precio de venta (CLP)</label>
+        <input type="number" id="edit-precio" min="0" required>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-stock">Stock actual</label>
+        <input type="number" id="edit-stock" min="0" required>
+        <span class="mensaje-error"></span>
+      </div>
+    </div>
+    <div class="campo" style="max-width:220px;">
+      <label for="edit-stock-minimo">Stock mínimo (alerta de reposición)</label>
+      <input type="number" id="edit-stock-minimo" min="0" required>
+      <span class="mensaje-error"></span>
+    </div>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <button type="submit" class="boton boton-primario">Guardar producto</button>
+      <button type="button" class="boton boton-linea" id="btn-cancelar-edicion">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/admin-productos.js"></script>
+</body>
+</html>
