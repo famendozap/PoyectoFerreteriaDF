@@ -1,6 +1,4 @@
-/* ==========================================================================
-   novedades.js — Listado y detalle de noticias/consejos
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   renderListadoNoticias();

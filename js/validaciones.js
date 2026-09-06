@@ -1,8 +1,4 @@
-/* ==========================================================================
-   validaciones.js — Funciones de validación reutilizables en JavaScript
-   ========================================================================== */
 
-/* --------------------------- Validadores atómicos --------------------------- */
 
 function esRequerido(valor) {
   return valor !== null && valor !== undefined && String(valor).trim().length > 0;
@@ -22,9 +18,7 @@ function esCorreoValido(valor) {
   return patron.test(String(valor || "").trim());
 }
 
-/* Valida el dígito verificador de un RUN chileno.
-   Se espera sin puntos ni guion, con el dígito verificador al final
-   (puede ser un número del 0-9 o "k"/"K"). Ej: 111111111 o 12345678K */
+
 function esRunValido(valorOriginal) {
   const valor = String(valorOriginal || "").trim().toUpperCase().replace(/[^0-9K]/g, "");
   if (valor.length < 2) return false;
@@ -48,12 +42,8 @@ function esRunValido(valorOriginal) {
   return dv === dvEsperado;
 }
 
-/* --------------------------- Motor de formularios --------------------------- */
-/**
- * Aplica un conjunto de reglas a un formulario.
- * reglas: { idCampo: [ { test: fn(valor) => bool, mensaje: "..." }, ... ] }
- * Devuelve true si TODO el formulario es válido.
- */
+
+
 function validarFormulario(reglas) {
   let formularioValido = true;
 
@@ -91,7 +81,7 @@ function limpiarValidacion(idCampo) {
   if (contenedor) contenedor.classList.remove("invalido");
 }
 
-/* Activa validación "en vivo" al salir de cada campo (evento blur) */
+
 function activarValidacionEnVivo(idFormulario, reglas) {
   const formulario = document.getElementById(idFormulario);
   if (!formulario) return;

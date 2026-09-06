@@ -1,6 +1,4 @@
-/* ==========================================================================
-   main.js — Comportamiento común a todas las páginas públicas
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   inicializarMenuMovil();
@@ -9,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   inicializarSesionUI();
 });
 
-/* Menú hamburguesa (colapsa navegación en pantallas < 768px) */
+
 function inicializarMenuMovil() {
   const boton = document.querySelector(".boton-menu");
   const cabecera = document.querySelector(".cabecera");
@@ -21,7 +19,7 @@ function inicializarMenuMovil() {
   });
 }
 
-/* Resalta en el menú la página actual */
+
 function marcarEnlaceActivo() {
   const actual = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-principal a").forEach((enlace) => {
@@ -30,7 +28,7 @@ function marcarEnlaceActivo() {
   });
 }
 
-/* -------------------- LocalStorage: lista de selección -------------------- */
+
 const CLAVE_SELECCION = "losmaestros_seleccion";
 
 function obtenerSeleccion() {
@@ -72,7 +70,7 @@ function actualizarContadorSeleccion() {
   contador.style.display = total > 0 ? "inline-flex" : "none";
 }
 
-/* -------------------- Sesión simulada (solo interfaz) -------------------- */
+
 const CLAVE_SESION = "losmaestros_sesion";
 
 function iniciarSesionSimulada(correo, tipo) {
@@ -106,7 +104,7 @@ function inicializarSesionUI() {
   }
 }
 
-/* -------------------------------- Utilidades ------------------------------- */
+
 function formatoCLP(numero) {
   return "$" + Number(numero).toLocaleString("es-CL");
 }

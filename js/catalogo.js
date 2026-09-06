@@ -1,6 +1,4 @@
-/* ==========================================================================
-   catalogo.js — Render dinámico del catálogo desde el arreglo PRODUCTOS
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const grilla = document.getElementById("grilla-catalogo");
@@ -11,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   llenarSelectCategorias(selectCategoria);
 
-  // Si se llega desde una tarjeta de categoría (catalogo.html?categoria=xxx)
+  
   const categoriaUrl = obtenerParametro("categoria");
   if (categoriaUrl) selectCategoria.value = categoriaUrl;
 

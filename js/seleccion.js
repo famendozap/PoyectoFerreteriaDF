@@ -1,6 +1,4 @@
-/* ==========================================================================
-   seleccion.js — Lista de interés / preselección de pedido (LocalStorage)
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const listaEl = document.getElementById("lista-seleccion");

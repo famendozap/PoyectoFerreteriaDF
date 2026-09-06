@@ -1,6 +1,3 @@
-/* ==========================================================================
-   contacto.js — Validación del formulario de contacto
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("form-contacto");

@@ -1,25 +1,18 @@
-/* ==========================================================================
-   data.js — Datos de la aplicación (Ferretería Los Maestros)
-   Todos los datos viven en arreglos de JavaScript, tal como pide la pauta
-   (no hay conexión a base de datos en esta evaluación).
-   ========================================================================== */
 
-/* Categorías del catálogo, con su imagen representativa */
 const CATEGORIAS = [
-  { slug: "mat-construccion",       nombre: "Materiales de Construcción", img: "img/cat-mat-construccion.svg" },
-  { slug: "pinturas",               nombre: "Pinturas y Recubrimientos",  img: "img/cat-pinturas.svg" },
-  { slug: "herramientas-manuales",  nombre: "Herramientas Manuales",      img: "img/cat-herramientas-manuales.svg" },
-  { slug: "herramientas-electricas",nombre: "Herramientas Eléctricas",    img: "img/cat-herramientas-electricas.svg" },
-  { slug: "gasfiteria",             nombre: "Gasfitería",                 img: "img/cat-gasfiteria.svg" },
-  { slug: "electricidad",           nombre: "Electricidad",               img: "img/cat-electricidad.svg" },
-  { slug: "tornilleria",            nombre: "Tornillería y Fijaciones",   img: "img/cat-tornilleria.svg" },
-  { slug: "madera",                 nombre: "Madera y Tableros",          img: "img/cat-madera.svg" },
-  { slug: "seguridad",              nombre: "Seguridad y EPP",            img: "img/cat-seguridad.svg" },
-  { slug: "jardin",                 nombre: "Jardín y Exterior",          img: "img/cat-jardin.svg" },
+  { slug: "mat-construccion",       nombre: "Materiales de Construcción", img: "img/mat-construccion .jpeg" },
+  { slug: "pinturas",               nombre: "Pinturas y Recubrimientos",  img: "img/Pinturas-recubrimiento.jpeg" },
+  { slug: "herramientas-manuales",  nombre: "Herramientas Manuales",      img: "img/herramientas-manuales.jpeg" },
+  { slug: "herramientas-electricas",nombre: "Herramientas Eléctricas",    img: "img/herramientas electricas.jpeg" },
+  { slug: "gasfiteria",             nombre: "Gasfitería",                 img: "img/gasfiteria.jpeg" },
+  { slug: "electricidad",           nombre: "Electricidad",               img: "img/electricidad.jpeg" },
+  { slug: "tornilleria",            nombre: "Tornillería y Fijaciones",   img: "img/tornillos.jpeg" },
+  { slug: "madera",                 nombre: "Madera y Tableros",          img: "img/madera.jpeg" },
+  { slug: "seguridad",              nombre: "Seguridad y EPP",            img: "img/seguridad .jpeg" },
+  { slug: "jardin",                 nombre: "Jardín y Exterior",          img: "img/jardin y exterior .jpeg" },
 ];
 
-/* Catálogo de productos — muestra real tomada de la planilla Excel
-   entregada por la ferretería (código, categoría, marca, precio, stock...) */
+
 const PRODUCTOS = [
   { id: "MC001", categoria: "mat-construccion", nombre: "Cemento Polpaico gris 25 kg", marca: "Polpaico", unidad: "Saco", precio: 5990, stock: 80, stockMinimo: 20 },
   { id: "MC002", categoria: "mat-construccion", nombre: "Cemento Melón blanco 25 kg", marca: "Melón", unidad: "Saco", precio: 7490, stock: 40, stockMinimo: 10 },
@@ -70,10 +63,10 @@ const PRODUCTOS = [
   { id: "JA004", categoria: "jardin", nombre: "Pala punta redonda #2 con mango", marca: "Corona", unidad: "Unidad", precio: 10990, stock: 8, stockMinimo: 2 },
 ];
 
-/* IDs destacados en la portada */
+
 const DESTACADOS = ["HE001", "MC001", "PT001", "HM001", "GS009", "SE001", "EL011", "MD003"];
 
-/* Noticias / consejos (sección "Novedades") */
+
 const NOTICIAS = [
   {
     id: 1,
@@ -105,7 +98,7 @@ const NOTICIAS = [
   }
 ];
 
-/* Regiones y comunas (Chile) — usadas en el formulario de registro */
+
 const REGIONES = [
   { region: "Región de Coquimbo", comunas: ["La Serena", "Coquimbo", "Ovalle", "Vicuña", "Andacollo"] },
   { region: "Región de Valparaíso", comunas: ["Valparaíso", "Viña del Mar", "Quilpué", "San Antonio", "Los Andes"] },
@@ -114,7 +107,7 @@ const REGIONES = [
   { region: "Región de La Araucanía", comunas: ["Temuco", "Villarrica", "Angol", "Pucón", "Lautaro"] },
 ];
 
-/* Usuarios de ejemplo para el mantenedor administrativo (solo en memoria/LocalStorage) */
+
 const USUARIOS_INICIALES = [
   { run: "111111111", nombre: "Pedro", apellidos: "Álvarez Muñoz", correo: "pedro.alvarez@lomaestros.cl", tipo: "Administrador", region: "Región de Coquimbo", comuna: "La Serena", direccion: "Av. Francisco de Aguirre 450" },
   { run: "222222222", nombre: "Marcela", apellidos: "Rojas Peña", correo: "marcela.rojas@lomaestros.cl", tipo: "Vendedor", region: "Región de Coquimbo", comuna: "La Serena", direccion: "Los Carrera 812" },

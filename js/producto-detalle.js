@@ -1,6 +1,4 @@
-/* ==========================================================================
-   producto-detalle.js — Renderiza la ficha de un producto según ?id=
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("detalle-producto");
