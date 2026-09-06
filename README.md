@@ -82,3 +82,4 @@ Reemplaza los nombres de ejemplo en `nosotros.html` por los integrantes reales d
 - Autenticación real con JWT y roles.
 - Conexión de los formularios de registro/login/mantenedores a la API REST.
 - Mapa interactivo con zona de cobertura real de despacho.
+# PoyectoFerreteriaDF
