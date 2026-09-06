@@ -1,8 +1,3 @@
-/* ==========================================================================
-   admin-productos.js — Mantenedor de productos (listado + edición)
-   Los cambios se guardan en LocalStorage para simular persistencia,
-   ya que esta evaluación no requiere conexión a base de datos.
-   ========================================================================== */
 
 const CLAVE_PRODUCTOS_ADMIN = "losmaestros_admin_productos";
 

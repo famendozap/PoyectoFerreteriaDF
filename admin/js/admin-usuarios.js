@@ -1,6 +1,4 @@
-/* ==========================================================================
-   admin-usuarios.js — Mantenedor de usuarios del sistema (RBAC)
-   ========================================================================== */
+
 
 const CLAVE_USUARIOS_ADMIN = "losmaestros_admin_usuarios";
 
