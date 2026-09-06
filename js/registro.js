@@ -1,6 +1,4 @@
-/* ==========================================================================
-   registro.js — Formulario de registro (público) con validaciones completas
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("form-registro");
