@@ -72,7 +72,7 @@ const NOTICIAS = [
     id: 1,
     titulo: "Cómo elegir el cemento correcto para tu obra",
     resumen: "Grado, marca y uso: te contamos qué considerar antes de comprar sacos de cemento para tu próximo proyecto.",
-    imagen: "img/blog-cemento.svg",
+    imagen: "img/cemento.jpeg",
     fecha: "2026-08-12",
     autor: "Equipo Los Maestros",
     contenido: [
@@ -86,7 +86,7 @@ const NOTICIAS = [
     id: 2,
     titulo: "Nueva forma de consultar stock antes de ir a la tienda",
     resumen: "Estamos digitalizando la consulta de disponibilidad para que contratistas y clientes no tengan que llamar por teléfono.",
-    imagen: "img/blog-despacho.svg",
+    imagen: "img/despacho.jpeg",
     fecha: "2026-08-20",
     autor: "Equipo Los Maestros",
     contenido: [
