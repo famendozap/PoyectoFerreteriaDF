@@ -1,6 +1,4 @@
-/* ==========================================================================
-   login.js — Validación del formulario de inicio de sesión
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("form-login");
