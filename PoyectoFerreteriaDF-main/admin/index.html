@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de administración — Ferretería Los Maestros</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<aside class="admin-sidebar">
+  <div class="admin-logo">
+    <img src="../img/favicon.svg" alt="">
+    <span>Los Maestros</span>
+  </div>
+  <span class="admin-badge-rol">ROL: ADMINISTRADOR</span>
+  <nav class="admin-nav" aria-label="Navegación administrativa">
+    <a href="index.html" class=" activo">Panel principal</a>
+    <a href="productos.html" class="">Mantenedor de productos</a>
+    <a href="usuarios.html" class="">Mantenedor de usuarios</a>
+  </nav>
+  <div class="admin-sidebar-pie">
+    <div class="admin-volver">
+      <a href="../index.html">&larr; Volver al sitio público</a>
+    </div>
+  </div>
+</aside>
+<main class="admin-contenido">
+
+<div class="admin-topbar">
+  <div>
+    <h1>Panel de administración</h1>
+    <p>Resumen general del inventario y los usuarios del sistema.</p>
+  </div>
+  <span style="color:var(--adm-texto-muted); font-size:0.85rem;">Sesión: admin@losmaestros.cl</span>
+</div>
+
+<div class="grilla-kpi">
+  <div class="tarjeta-kpi">
+    <div class="valor" id="kpi-total-productos">–</div>
+    <div class="etiqueta">Productos en catálogo</div>
+  </div>
+  <div class="tarjeta-kpi alerta">
+    <div class="valor" id="kpi-bajo-stock">–</div>
+    <div class="etiqueta">Productos bajo stock mínimo</div>
+  </div>
+  <div class="tarjeta-kpi acento">
+    <div class="valor" id="kpi-total-usuarios">–</div>
+    <div class="etiqueta">Usuarios registrados</div>
+  </div>
+  <div class="tarjeta-kpi">
+    <div class="valor">10</div>
+    <div class="etiqueta">Categorías activas</div>
+  </div>
+</div>
+
+<div class="admin-panel">
+  <h2>Accesos rápidos</h2>
+  <p style="color:var(--adm-texto-muted);">Desde aquí puedes gestionar el contenido principal del sitio.</p>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
+    <a href="productos.html" class="boton boton-primario">Ir a mantenedor de productos</a>
+    <a href="usuarios.html" class="boton boton-linea">Ir a mantenedor de usuarios</a>
+  </div>
+</div>
+
+<div class="admin-panel">
+  <h2>Productos con stock bajo el mínimo</h2>
+  <div class="admin-tabla-wrap">
+    <table class="admin-tabla">
+      <thead><tr><th>Código</th><th>Producto</th><th>Stock actual</th><th>Stock mínimo</th></tr></thead>
+      <tbody id="cuerpo-tabla-alertas"></tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="../js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("kpi-total-productos").textContent = PRODUCTOS.length;
+  const bajoStock = PRODUCTOS.filter(p => p.stock <= p.stockMinimo);
+  document.getElementById("kpi-bajo-stock").textContent = bajoStock.length;
+  document.getElementById("kpi-total-usuarios").textContent = USUARIOS_INICIALES.length;
+  const cuerpo = document.getElementById("cuerpo-tabla-alertas");
+  if (bajoStock.length === 0) {
+    cuerpo.innerHTML = '<tr><td colspan="4" style="color:var(--adm-texto-muted);">No hay productos bajo el stock mínimo por ahora.</td></tr>';
+  } else {
+    bajoStock.forEach(p => {
+      const fila = document.createElement("tr");
+      fila.innerHTML = `<td>${p.id}</td><td>${p.nombre}</td><td>${p.stock}</td><td>${p.stockMinimo}</td>`;
+      cuerpo.appendChild(fila);
+    });
+  }
+});
+</script>
+</body>
+</html>

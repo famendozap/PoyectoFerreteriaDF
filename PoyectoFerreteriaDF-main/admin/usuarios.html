@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mantenedor de usuarios — Panel admin</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<aside class="admin-sidebar">
+  <div class="admin-logo">
+    <img src="../img/favicon.svg" alt="">
+    <span>Los Maestros</span>
+  </div>
+  <span class="admin-badge-rol">ROL: ADMINISTRADOR</span>
+  <nav class="admin-nav" aria-label="Navegación administrativa">
+    <a href="index.html" class="">Panel principal</a>
+    <a href="productos.html" class="">Mantenedor de productos</a>
+    <a href="usuarios.html" class=" activo">Mantenedor de usuarios</a>
+  </nav>
+  <div class="admin-sidebar-pie">
+    <div class="admin-volver">
+      <a href="../index.html">&larr; Volver al sitio público</a>
+    </div>
+  </div>
+</aside>
+<main class="admin-contenido">
+
+<div class="admin-topbar">
+  <div>
+    <h1>Mantenedor de usuarios</h1>
+    <p>Total: <span id="total-usuarios-admin">–</span> usuarios registrados</p>
+  </div>
+  <button type="button" class="boton boton-primario" id="btn-nuevo-usuario">+ Nuevo usuario</button>
+</div>
+
+<div class="admin-panel">
+  <div class="admin-tabla-wrap">
+    <table class="admin-tabla">
+      <thead>
+        <tr><th>RUN</th><th>Nombre completo</th><th>Correo</th><th>Rol</th><th>Comuna</th><th>Acciones</th></tr>
+      </thead>
+      <tbody id="cuerpo-tabla-usuarios"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="admin-panel" id="panel-edicion-usuario" style="display:none;">
+  <h2 id="titulo-panel-edicion-usuario">Editar usuario</h2>
+  <form id="form-editar-usuario" novalidate>
+    <input type="hidden" id="edit-usr-run-original">
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-usr-run">RUN (sin puntos ni guion)</label>
+        <input type="text" id="edit-usr-run" maxlength="10" required>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-usr-tipo">Rol / tipo de usuario</label>
+        <select id="edit-usr-tipo" required>
+          <option value="Administrador">Administrador</option>
+          <option value="Vendedor">Vendedor / Empleado</option>
+          <option value="Contratista">Contratista / Cliente registrado</option>
+        </select>
+        <span class="mensaje-error"></span>
+      </div>
+    </div>
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-usr-nombre">Nombre</label>
+        <input type="text" id="edit-usr-nombre" maxlength="50" required>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-usr-apellidos">Apellidos</label>
+        <input type="text" id="edit-usr-apellidos" maxlength="100" required>
+        <span class="mensaje-error"></span>
+      </div>
+    </div>
+    <div class="campo">
+      <label for="edit-usr-correo">Correo electrónico</label>
+      <input type="email" id="edit-usr-correo" maxlength="100" required>
+      <span class="mensaje-error"></span>
+    </div>
+    <div class="fila-2">
+      <div class="campo">
+        <label for="edit-usr-region">Región</label>
+        <select id="edit-usr-region" required></select>
+        <span class="mensaje-error"></span>
+      </div>
+      <div class="campo">
+        <label for="edit-usr-comuna">Comuna</label>
+        <select id="edit-usr-comuna" required></select>
+        <span class="mensaje-error"></span>
+      </div>
+    </div>
+    <div class="campo">
+      <label for="edit-usr-direccion">Dirección</label>
+      <input type="text" id="edit-usr-direccion" maxlength="300" required>
+      <span class="mensaje-error"></span>
+    </div>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <button type="submit" class="boton boton-primario">Guardar usuario</button>
+      <button type="button" class="boton boton-linea" id="btn-cancelar-edicion-usuario">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/admin-usuarios.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<rect width="800" height="420" fill="#DAD6CC"/>
+<rect y="260" width="800" height="160" fill="#8b6a52"/>
+<rect x="40" y="80" width="720" height="200" fill="#1B3349"/>
+<rect x="40" y="50" width="720" height="34" fill="#E8871E"/>
+<text x="400" y="74" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="22" font-weight="700" fill="#22262B">FERRETERÍA LOS MAESTROS · LA SERENA</text>
+<rect x="80" y="120" width="140" height="140" fill="#bcd4e6" opacity="0.85"/>
+<rect x="330" y="120" width="140" height="140" fill="#22262B"/>
+<rect x="345" y="135" width="110" height="110" fill="#3a3f45"/>
+<rect x="580" y="120" width="140" height="140" fill="#bcd4e6" opacity="0.85"/>
+</svg>

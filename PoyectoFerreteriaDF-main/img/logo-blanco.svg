@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" width="340" height="80">
+<g>
+  <rect x="2" y="14" width="52" height="52" rx="4" fill="#E8871E"/>
+  <path d="M18 46 L28 30 L34 30 L26 44 L38 44 L20 62 L24 48 Z" fill="#22262B"/>
+</g>
+<text x="66" y="38" font-family="Barlow Condensed, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#FFFFFF">FERRETERÍA</text>
+<text x="66" y="64" font-family="Barlow Condensed, Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="0.5" fill="#E8871E">LOS MAESTROS</text>
+</svg>

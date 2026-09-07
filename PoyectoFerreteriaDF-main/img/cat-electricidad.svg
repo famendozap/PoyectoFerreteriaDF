@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+<rect width="320" height="320" fill="#E8871E"/>
+<rect width="320" height="320" fill="#22262B" opacity="0.12"/>
+<g transform="translate(96,70) scale(2.1)">
+  <path d="M36 10 L18 38 h14 l-6 20 26 -32 H36 Z" fill="#ffffff" opacity="0.92"/>
+</g>
+<text x="160" y="270" text-anchor="middle" font-family="Barlow Condensed, Arial" font-size="24" font-weight="700" fill="#ffffff">Electricidad</text>
+</svg>
