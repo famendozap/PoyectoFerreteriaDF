@@ -1,6 +1,4 @@
-/* ==========================================================================
-   admin.css — Panel administrativo (se diferencia visualmente del sitio público)
-   ========================================================================== */
+
 
 :root {
   --adm-bg: #171A1E;
@@ -35,7 +33,6 @@ body.admin-body {
 
 .admin-body a { color: var(--adm-acento); }
 
-/* -------------------------------- Sidebar -------------------------------- */
 .admin-sidebar {
   width: 240px;
   flex-shrink: 0;
@@ -83,12 +80,12 @@ body.admin-body {
   padding-top: 14px;
 }
 
-/* -------------------------------- Contenido ------------------------------- */
+
 .admin-contenido { flex: 1; padding: 30px 36px 60px; max-width: 1200px; }
 .admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 14px; }
 .admin-topbar p { color: var(--adm-texto-muted); margin: 4px 0 0; }
 
-/* ---------------------------------- KPIs ---------------------------------- */
+
 .grilla-kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 30px; }
 .tarjeta-kpi {
   background: var(--adm-panel);
@@ -102,7 +99,7 @@ body.admin-body {
 .tarjeta-kpi .valor { font-family: "Barlow Condensed", Arial, sans-serif; font-weight: 700; font-size: 2.1rem; color: #fff; }
 .tarjeta-kpi .etiqueta { color: var(--adm-texto-muted); font-size: 0.88rem; }
 
-/* --------------------------------- Paneles --------------------------------- */
+
 .admin-panel {
   background: var(--adm-panel);
   border: 1px solid var(--adm-borde);
@@ -111,7 +108,7 @@ body.admin-body {
   margin-bottom: 24px;
 }
 
-/* --------------------------------- Botones --------------------------------- */
+
 .admin-body .boton {
   display: inline-block;
   font-family: "Barlow Condensed", Arial, sans-serif;
@@ -131,7 +128,7 @@ body.admin-body {
 .admin-body .boton-peligro:hover { background: #b8362d; }
 .admin-body .boton-pequeno { padding: 5px 12px; font-size: 0.85rem; }
 
-/* --------------------------------- Tablas ---------------------------------- */
+
 .admin-tabla-wrap { overflow-x: auto; }
 table.admin-tabla { width: 100%; border-collapse: collapse; min-width: 640px; }
 table.admin-tabla th {
@@ -154,7 +151,6 @@ table.admin-tabla tbody tr:hover { background: rgba(255,255,255,0.02); }
 .admin-badge-alerta { background: rgba(228,87,76,0.15); color: var(--adm-warn); }
 .admin-badge-rolchip { background: rgba(78,113,150,0.2); color: #9dc0e4; }
 
-/* --------------------------------- Formularios ------------------------------ */
 .admin-body .campo { margin-bottom: 16px; }
 .admin-body .campo label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; color: var(--adm-texto-muted); }
 .admin-body .campo input,
