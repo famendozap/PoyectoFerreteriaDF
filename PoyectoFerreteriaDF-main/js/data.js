@@ -11,7 +11,8 @@ const CATEGORIAS = [
   { slug: "seguridad",              nombre: "Seguridad y EPP",            img: "img/seguridad .jpeg" },
   { slug: "jardin",                 nombre: "Jardín y Exterior",          img: "img/jardin y exterior .jpeg" },
 ];
-//aca van las imagenes del catalogo77 porsiacaso
+
+
 
 const PRODUCTOS = [
   { id: "MC001", categoria: "mat-construccion", nombre: "Cemento Polpaico gris 25 kg", marca: "Polpaico", unidad: "Saco", precio: 5990, stock: 80, stockMinimo: 20, imagen: "img/polpaico_gris_25kg.jpg" },
