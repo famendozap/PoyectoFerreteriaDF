@@ -1,5 +1,3 @@
-
-
 :root {
   --adm-bg: #171A1E;
   --adm-panel: #1F242B;
@@ -187,3 +185,4 @@ table.admin-tabla tbody tr:hover { background: rgba(255,255,255,0.02); }
   .grilla-kpi { grid-template-columns: repeat(2, 1fr); }
   .admin-body .fila-2 { grid-template-columns: 1fr; }
 }
+
