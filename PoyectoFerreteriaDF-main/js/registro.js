@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     mostrarMensajeFormulario(
       "mensaje-registro",
-      "¡Registro validado correctamente! (Este formulario aún no se conecta a una base de datos; esa funcionalidad se incorporará en la siguiente evaluación).",
+      "¡Registro validado correctamente!",
       "exito"
     );
     formulario.reset();
