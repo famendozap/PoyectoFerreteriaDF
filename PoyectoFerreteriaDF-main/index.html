@@ -185,7 +185,7 @@
       div.className = "tarjeta-producto";
       div.innerHTML = `
         <a class="img-wrap" href="producto-detalle.html?id=${p.id}">
-          <img src="img/prod-${p.categoria}.svg" alt="${p.nombre}" width="240" height="240">
+          <img src="${p.imagen ? p.imagen : `img/prod-${p.categoria}.svg`}" alt="${p.nombre}" width="240" height="240">
         </a>
         <div class="cont">
           <span class="categoria">${catInfo ? catInfo.nombre : ""}</span>

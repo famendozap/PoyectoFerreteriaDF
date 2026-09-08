@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   contenedor.innerHTML = `
     <div>
-      <img src="img/prod-${producto.categoria}.svg" alt="${escaparHtml(producto.nombre)}" width="480" height="480">
+      <img src="${producto.imagen ? producto.imagen : `img/prod-${producto.categoria}.svg`}" alt="${escaparHtml(producto.nombre)}" width="480" height="480">
     </div>
     <div>
       <span class="categoria">${escaparHtml(catInfo ? catInfo.nombre : producto.categoria)}</span>
